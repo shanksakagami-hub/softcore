@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty</title>
+    <style>
+        /* Basic CSS for better visualization */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #00264d;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23004d99"/><text x="400" y="200" font-family="Arial" font-size="40" text-anchor="middle" fill="white">Engineering Building</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 20px;
+        }
+        
+        .programs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .program-card {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .search-box {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .search-box button {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .departments {
+            margin: 40px 0;
+        }
+        
+        .department {
+            border-left: 4px solid #003366;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .department h3 {
+            color: #003366;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .program-card {
+                width: 45%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .program-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="#fff"/>
+            <text x="50" y="60" font-size="12" text-anchor="middle" fill="#003366">SU</text>
+        </svg>
+        <h1>Softcore University</h1>
+        <p>Excellence in Education</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="administration.html">Administration</a></li>
+            <li><a href="faculties.html">Faculties</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h2>Faculty of Engineering</h2>
+            <p>Building Tomorrow's Technology Leaders</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Search curriculum or courses...">
+            <button>Search</button>
+        </div>
+        
+        <!-- Faculty Introduction -->
+        <section>
+            <h2>Welcome to the Faculty of Engineering</h2>
+            <p>The Faculty of Engineering at Softcore University is committed to excellence in education, research, and innovation. Our programs are designed to equip students with the knowledge and skills needed to solve complex engineering challenges and contribute to technological advancement.</p>
+        </section>
+        
+        <!-- Departments -->
+        <section class="departments">
+            <h2>Our Departments</h2>
+            
+            <div class="department">
+                <h3>Mechanical Engineering</h3>
+                <p>The Department of Mechanical Engineering offers comprehensive programs focusing on design, analysis, manufacturing, and maintenance of mechanical systems.</p>
+                <a href="mechanical.html">Learn More</a>
+            </div>
+            
+            <div class="department">
+                <h3>Civil Engineering</h3>
+                <p>Our Civil Engineering Department specializes in the design, construction, and maintenance of the built environment, including infrastructure like roads, bridges, and buildings.</p>
+                <a href="civil.html">Learn More</a>
+            </div>
+            
+            <div class="department">
+                <h3>Electrical Engineering</h3>
+                <p>The Department of Electrical Engineering offers specialized programs in electrical systems, electronics, and communication engineering to prepare students for careers in this rapidly evolving field.</p>
+                <a href="electrical.html">Learn More</a>
+            </div>
+        </section>
+        
+        <!-- Featured Programs -->
+        <section>
+            <h2>Featured Programs in Electrical Engineering</h2>
+            <div class="programs">
+                <div class="program-card">
+                    <h3>B.Tech in Electrical and Electronic Engineering</h3>
+                    <p>A four-year program focused on practical applications of electrical engineering principles.</p>
+                    <a href="btech-ee.html">View Curriculum</a>
+                </div>
+                
+                <div class="program-card">
+                    <h3>B.Eng in Electrical and Electronic Engineering</h3>
+                    <p>A comprehensive engineering program with strong theoretical foundations and practical skills.</p>
+                    <a href="beng-ee.html">View Curriculum</a>
+                </div>
+                
+                <div class="program-card">
+                    <h3>B.Eng in Electrical and Communication Engineering</h3>
+                    <p>Specialized in modern communication technologies, networks, and signal processing.</p>
+                    <a href="beng-ece.html">View Curriculum</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Softcore University</p>
+            <p>P.O BOX 54998-00200, Nairobi</p>
+            <p>Physical location: Mukoma Road, Nairobi</p>
+            <p>&copy; 2025 Softcore University. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty of Engineering - Softcore University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #00264d;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-header {
+            background-color: #f5f5f5;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        
+        .department-section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        
+        .department-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .department-icon {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .department-programs {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .program-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .program-card h4 {
+            color: #003366;
+            margin-top: 0;
+        }
+        
+        .program-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .program-detail {
+            width: 48%;
+            margin-bottom: 10px;
+        }
+        
+        .faculty-profile {
+            display: flex;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .faculty-photo {
+            width: 150px;
+            height: 180px;
+            background-color: #ddd;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .faculty-info {
+            flex: 1;
+        }
+        
+        .faculty-info h3 {
+            margin-top: 0;
+            color: #003366;
+        }
+        
+        .faculty-contact {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .course-structure {
+            margin-top: 30px;
+        }
+        
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .course-table th,
+        .course-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .course-table th {
+            background-color: #003366;
+            color: white;
+        }
+        
+        .course-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .facilities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .facility {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .facility-icon {
+            font-size: 40px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .program-detail {
+                width: 100%;
+            }
+            
+            .faculty-profile {
+                flex-direction: column;
+            }
+            
+            .faculty-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .facility {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="#fff"/>
+            <text x="50" y="60" font-size="12" text-anchor="middle" fill="#003366">SU</text>
+        </svg>
+        <h1>Softcore University</h1>
+        <p>Excellence in Education</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="administration.html">Administration</a></li>
+            <li><a href="faculties.html">Faculties</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h2>Faculty of Engineering</h2>
+            <p>Innovation through Education</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a href="faculties.html">Faculties</a> > Engineering
+        </div>
+        
+        <!-- Introduction -->
+        <section>
+            <h2>Welcome to the Faculty of Engineering</h2>
+            <p>The Faculty of Engineering at Softcore University is dedicated to producing skilled engineers equipped with theoretical knowledge and practical skills to address contemporary challenges in engineering. Our programs focus on innovation, sustainability, and industry-relevant skills, preparing graduates for successful careers in a rapidly evolving technological landscape.</p>
+            
+            <div class="faculty-profile">
+                <div class="faculty-photo">
+                    <img alt="" height="187" src="AC0388.jpg" width="224">
+                </div>
+                <div class="faculty-info">
+                    <h3>Prof. Robert Njoroge, Ph.D.</h3>
+                    <p><strong>Dean, Faculty of Engineering</strong></p>
+                    <p>Prof. Njoroge brings over 20 years of experience in engineering education and research. He has led numerous innovative projects and published extensively in prestigious international journals. His vision is to establish the Faculty of Engineering as a center of excellence in research and innovation in East Africa.</p>
+                    <div class="faculty-contact">
+                        <p><strong>Email:</strong> dean.engineering@softcore.co.ke</p>
+                        <p><strong>Office:</strong> Engineering Building, Room 301</p>
+                        <p><strong>Phone:</strong> +254 20 123 4570</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Departments -->
+        <section>
+            <h2>Our Departments</h2>
+            
+            <!-- Mechanical Engineering -->
+            <div class="department-section">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <img alt="" height="102" src="mech.jpg" width="200">
+                    </div>
+                    <div>
+                        <h3>Department of Mechanical Engineering</h3>
+                        <p>The Department of Mechanical Engineering focuses on the design, manufacturing, and operation of mechanical systems. Our curriculum combines theoretical foundations with hands-on practical experience.</p>
+                    </div>
+                </div>
+                
+                <div class="department-programs">
+                    <h4>Programs Offered:</h4>
+                    <div class="program-card">
+                        <h4>Bachelor of Engineering in Mechanical Engineering</h4>
+                        <p>A four-year program that provides comprehensive education in mechanical engineering principles, design methodologies, and manufacturing techniques.</p>
+                        <div class="program-details">
+                            <div class="program-detail">
+                                <strong>Duration:</strong> 4 Years
+                            </div>
+                            <div class="program-detail">
+                                <strong>Delivery Mode:</strong> Full-time
+                            </div>
+                            <div class="program-detail">
+                                <strong>Entry Requirements:</strong> C+ in KCSE
+                            </div>
+                            <div class="program-detail">
+                                <strong>Key Subjects:</strong> Mathematics, Physics
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <h4>Master of Science in Mechanical Engineering</h4>
+                        <p>An advanced program focusing on specialized areas such as thermodynamics, fluid mechanics, materials science, and mechanical design.</p>
+                        <div class="program-details">
+                            <div class="program-detail">
+                                <strong>Duration:</strong> 2 Years
+                            </div>
+                            <div class="program-detail">
+                                <strong>Delivery Mode:</strong> Full-time/Part-time
+                            </div>
+                            <div class="program-detail">
+                                <strong>Entry Requirements:</strong> Bachelor's degree in relevant field
+                            </div>
+                            <div class="program-detail">
+                                <strong>Key Focus:</strong> Research and specialization
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Civil Engineering -->
+            <div class="department-section">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <img alt="" height="100" src="department.jpeg" width="239">
+                    </div>
+                    <div>
+                        <h3>Department of Civil Engineering</h3>
+                        <p>The Department of Civil Engineering prepares students for designing, constructing, and maintaining physical infrastructure. Our curriculum emphasizes sustainable development and innovative solutions for urban challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="department-programs">
+                    <h4>Programs Offered:</h4>
+                    <div class="program-card">
+                        <h4>Bachelor of Engineering in Civil Engineering</h4>
+                        <p>A comprehensive program covering structural engineering, transportation systems, geotechnical engineering, water resources, and environmental engineering.</p>
+                        <div class="program-details">
+                            <div class="program-detail">
+                                <strong>Duration:</strong> 4 Years
+                            </div>
+                            <div class="program-detail">
+                                <strong>Delivery Mode:</strong> Full-time
+                            </div>
+                            <div class="program-detail">
+                                <strong>Entry Requirements:</strong> C+ in KCSE
+                            </div>
+                            <div class="program-detail">
+                                <strong>Key Subjects:</strong> Mathematics, Physics
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card">
+                        <h4>Master of Engineering in Structural Engineering</h4>
+                        <p>An advanced program specializing in the analysis and design of structures, earthquake engineering, and advanced construction materials.</p>
+                        <div class="program-details">
+                            <div class="program-detail">
+                                <strong>Duration:</strong> 2 Years
+                            </div>
+                            <div class="program-detail">
+                                <strong>Delivery Mode:</strong> Full-time/Part-time
+                            </div>
+                            <div class="program-detail">
+                                <strong>Entry Requirements:</strong> Bachelor's degree in Civil Engineering
+                            </div>
+                            <div class="program-detail">
+                                <strong>Key Focus:</strong> Advanced structural analysis
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Electrical Engineering -->
+            <div class="department-section">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <img alt="" height="100" src="lg6.jpg" width="161">
+                    </div>
+                    <div>
+                        <h3>Department of Electrical Engineering</h3>
+                        <p>The Department of Electrical Engineering offers cutting-edge programs in power systems, electronics, telecommunications, and computer engineering. Our curriculum combines theoretical knowledge with practical applications to address contemporary technological challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="department-programs">
+                    <h4>Programs Offered:</h4>
+                    <div class="program-card">
+                        <h4>
+						<a href="B.Tech%20in%20Electrical%20and%20Electronic%20Engineering.html">Bachelor of Technology in Electrical and Electronic Engineering</a></h4>
+                        <p>A practice-oriented program focusing on applied electrical engineering skills, electronics design, and implementation of electrical systems.</p>
+                        <div class="program-details">
+                            <div class="program-detail">
+                                <strong>Duration:</strong> 4 Years
+                            </div>
+                            <div class="program-detail">
+                                <strong>Delivery Mode:</strong> Full-time
+                            </div>
+                            <div class="program-detail">
+                                <strong>Entry Requirements:</strong> C+ in KCSE
+                            </div>
+                            <div class="program-detail">
+                                <strong>Key Subjects:</strong> Mathematics, Physics
+                            </div>
+                        </div>
+                        
+                        <div class="course-structure">
+                            <h5>Key Course Units:</h5>
+                            <table class="course-table">
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Core Courses</th
